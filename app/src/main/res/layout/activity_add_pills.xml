@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddPillsActivity"
+   >
+
+    <EditText
+        android:id="@+id/pillNameEdText"
+        android:layout_width="332dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:hint="Наименование препарата"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="OnClick" />
+
+    <EditText
+        android:id="@+id/pillSizePackEdText"
+        android:layout_width="172dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="Объем упаковки"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pillNameEdText" />
+
+    <EditText
+        android:id="@+id/pillNumPackEdText"
+        android:layout_width="86dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:text="В наличии"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pillSizePackEdText" />
+
+    <Spinner
+        android:id="@+id/pillsSpinner"
+        android:layout_width="141dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pillSizePackEdText"
+        app:layout_constraintStart_toEndOf="@+id/pillSizePackEdText"
+        app:layout_constraintTop_toTopOf="@+id/pillSizePackEdText"
+        app:layout_constraintVertical_bias="0.611"></Spinner>
+
+    <Button
+        android:id="@+id/insert_pill_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="20dp"
+style="@style/ButtonAction"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Добавить"
+        android:textColor="@color/colorTextIcons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pillNumPackEdText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/roboto"
+        android:text="Новый препарат"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="упаковок"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pillNumPackEdText"
+        app:layout_constraintStart_toEndOf="@+id/pillNumPackEdText"
+        app:layout_constraintTop_toTopOf="@+id/pillNumPackEdText"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

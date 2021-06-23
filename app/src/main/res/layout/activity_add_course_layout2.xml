@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddCourseActivity">
+
+    <Spinner
+        android:id="@+id/spinnerIntervalHours"
+        android:layout_width="130dp"
+        android:layout_height="41dp"
+        app:layout_constraintStart_toStartOf="@+id/numInDayEdTxt"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:text="Интервал между приемами"
+        app:layout_constraintStart_toStartOf="@+id/numInDayEdTxt"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <EditText
+        android:id="@+id/numInDayEdTxt"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:digits="123456789"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/startCourseEdTxt"
+        app:layout_constraintTop_toBottomOf="@+id/startCourseEdTxt" />
+
+    <Spinner
+        android:id="@+id/spinnerIntervalMinute"
+        android:layout_width="130dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerIntervalHours"
+        app:layout_constraintStart_toEndOf="@+id/spinnerIntervalHours"
+        app:layout_constraintTop_toTopOf="@+id/spinnerIntervalHours"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="139dp"
+        android:layout_height="56dp"
+        android:fontFamily="@font/roboto"
+        android:text="Время первого в день приема"
+        app:layout_constraintBottom_toBottomOf="@+id/firstTimeEdTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toEndOf="@+id/firstTimeEdTxt"
+        app:layout_constraintTop_toBottomOf="@+id/intervalDaysEdTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="дн"
+        app:layout_constraintBottom_toBottomOf="@+id/intervalDaysEdTxt"
+        app:layout_constraintStart_toEndOf="@+id/intervalDaysEdTxt" />
+
+    <TextView
+        android:id="@+id/firstTimeEdTxt"
+        android:layout_width="156dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="время первого приема"
+        android:textAlignment="viewStart"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/intervalDaysEdTxt"
+        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+    <EditText
+        android:id="@+id/intervalDaysEdTxt"
+        android:layout_width="86dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:digits="123456789"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/spinnerIntervalHours"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerIntervalHours" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:text="Интервал между днями приема"
+        app:layout_constraintBottom_toBottomOf="@+id/intervalDaysEdTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toEndOf="@+id/intervalDaysEdTxt"
+        app:layout_constraintTop_toTopOf="@+id/intervalDaysEdTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="162dp"
+        android:layout_height="33dp"
+        android:text="Количество приемов в день"
+        app:layout_constraintBottom_toBottomOf="@+id/numInDayEdTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/numInDayEdTxt"
+        app:layout_constraintTop_toTopOf="@+id/numInDayEdTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/endCourseTxt"
+        android:layout_width="123dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="конец курса"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/startCourseEdTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toEndOf="@+id/startCourseEdTxt"
+        app:layout_constraintTop_toTopOf="@+id/startCourseEdTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/startCourseEdTxt"
+        android:layout_width="122dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="начало курса"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/diagnosisSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosisSpinner" />
+
+    <EditText
+        android:id="@+id/courseNameEdTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="наименование"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/pillsSpinner"
+        android:layout_width="353dp"
+        android:layout_height="46dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseNameEdTxt" />
+
+    <Spinner
+        android:id="@+id/foodsSpinner"
+        android:layout_width="358dp"
+        android:layout_height="47dp"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <Spinner
+        android:id="@+id/diagnosisSpinner"
+        android:layout_width="359dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/doctorsSpinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/doctorsSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <Spinner
+        android:id="@+id/doctorsSpinner"
+        android:layout_width="359dp"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/foodsSpinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/foodsSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <Switch
+        android:id="@+id/switchPillProcedure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="препарат"
+        android:textOff="процедуры"
+        android:textOn="препараты"
+        app:layout_constraintBottom_toBottomOf="@+id/courseNameEdTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/courseNameEdTxt"
+        app:layout_constraintTop_toTopOf="@+id/courseNameEdTxt" />
+
+    <Button
+        android:id="@+id/addCourseButton"
+        style="@style/ButtonAction"
+        android:layout_width="120dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:text="Далее"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toEndOf="@+id/firstTimeEdTxt"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pillsSpinner" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pillsSpinner" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodsSpinner" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doctorsSpinner" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosisSpinner" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startCourseEdTxt" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numInDayEdTxt" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerIntervalHours" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

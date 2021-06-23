@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegistrationActivity">
+
+    <EditText
+        android:id="@+id/regPasswordEdTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="пароль"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/registrationTextView"
+        app:layout_constraintStart_toStartOf="@+id/registrationTextView"
+        app:layout_constraintTop_toBottomOf="@+id/regEmailEdTxt" />
+
+    <TextView
+        android:id="@+id/registrationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Регистрация"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/regEmailEdTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/registrationTextView"
+        app:layout_constraintStart_toStartOf="@+id/registrationTextView"
+        app:layout_constraintTop_toBottomOf="@+id/registrationTextView" />
+
+    <Button
+        android:id="@+id/regUserButton"
+        style="@style/ButtonAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Зарегистрироваться"
+        android:textColor="@color/colorTextIcons"
+        app:layout_constraintEnd_toEndOf="@+id/registrationTextView"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="@+id/registrationTextView"
+        app:layout_constraintTop_toBottomOf="@+id/regLastNameEdTxt" />
+
+    <EditText
+        android:id="@+id/regPasswordCheckEdTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="проверка пароля"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/registrationTextView"
+        app:layout_constraintStart_toStartOf="@+id/registrationTextView"
+        app:layout_constraintTop_toBottomOf="@+id/regPasswordEdTxt" />
+
+    <EditText
+        android:id="@+id/regFirstNameEdTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="имя"
+        app:layout_constraintEnd_toEndOf="@+id/registrationTextView"
+        app:layout_constraintStart_toStartOf="@+id/registrationTextView"
+        app:layout_constraintTop_toBottomOf="@+id/regPasswordCheckEdTxt" />
+
+    <EditText
+        android:id="@+id/regLastNameEdTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="фамилия"
+        app:layout_constraintEnd_toEndOf="@+id/registrationTextView"
+        app:layout_constraintStart_toStartOf="@+id/registrationTextView"
+        app:layout_constraintTop_toBottomOf="@+id/regFirstNameEdTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

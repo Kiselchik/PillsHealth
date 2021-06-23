@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CourseHistoryActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCourse"
+        style="@style/MyCardCourse"
+        android:layout_width="342dp"
+        android:layout_height="303dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewNameCourse"
+                    android:layout_width="214dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Курс"
+                    android:textColor="@color/colorTextIcons"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textViewStatusCourse"
+                    android:layout_width="71dp"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Статус"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextIcons"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCourse2"
+                style="@style/MyCardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/textViewPillProcedureCourse"
+                        android:layout_width="270dp"
+                        android:layout_height="35dp"
+                        android:background="@color/colorLightPrimary"
+                        android:text="Процедура/Лекарство"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/textViewFoodCourse"
+                        android:layout_width="102dp"
+                        android:layout_height="32dp"
+                        android:text="еда"
+                        android:textSize="14sp"
+
+                        app:layout_constraintStart_toEndOf="@+id/textViewPillProcedureCourse"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewNameCourse" />
+
+                    <TextView
+                        android:id="@+id/textViewDoctorCourse"
+                        android:layout_width="164dp"
+                        android:layout_height="41dp"
+                        android:layout_marginTop="10dp"
+                        android:text="доктор"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.109"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPillProcedureCourse" />
+
+                    <TextView
+                        android:id="@+id/textViewDateCourse"
+                        android:layout_width="130dp"
+                        android:layout_height="48dp"
+                        android:text="дата"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewDoctorCourse" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/chBoxNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Напоминать о курсе"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardCourse" />
+    <CheckBox
+        android:id="@+id/chBoxSymptom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Напоминать о проверке симптомов"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chBoxNotification" />
+
+    <CheckBox
+        android:id="@+id/chBoxHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Напоминать о проверке самочувствия"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chBoxSymptom" />
+
+    <Button
+        android:id="@+id/toSetingCourse"
+        style="@style/ButtonAction"
+        android:layout_width="189dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Настроить уведомления"
+        android:textColor="@color/colorTextIcons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chBoxHealth" />
+
+    <Button
+        android:id="@+id/saveChBox"
+        style="@style/ButtonAction"
+        android:layout_width="189dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Сохранить изменения"
+        android:textColor="@color/colorTextIcons"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toSetingCourse" />
+
+    <Button
+        android:id="@+id/toDynamicCourse"
+        style="@style/ButtonAction"
+        android:layout_width="189dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Динамика"
+        android:textColor="@color/colorTextIcons"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveChBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

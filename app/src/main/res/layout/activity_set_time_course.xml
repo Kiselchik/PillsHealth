@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SetTimeCourseActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDatesSetTime"
+        android:layout_width="321dp"
+        android:layout_height="445dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChooseDate" />
+
+    <TextView
+        android:id="@+id/textViewChooseDate"
+        android:layout_width="194dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="14sp"
+        android:text="Выберите время"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewDatesSetTime"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/SetTimePointCourseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        style="@style/ButtonAction"
+        android:textColor="@color/colorTextIcons"
+        android:text="Настроить"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerViewDatesSetTime"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewDatesSetTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

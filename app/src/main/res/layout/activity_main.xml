@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:elevation="10dp"
+    tools:context=".activity.MainActivity">
+
+    <Button
+        android:id="@+id/health_btn"
+        android:layout_width="328dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_main_shape_pressed"
+
+        android:fontFamily="@font/roboto"
+        android:text="Самочувствие"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/toDiagnosysBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ib_doctors"
+        app:layout_constraintTop_toBottomOf="@+id/ib_doctors" />
+
+    <Button
+        android:id="@+id/ib_pills"
+        android:layout_width="157dp"
+        android:layout_height="141dp"
+        android:fontFamily="@font/roboto"
+        android:text="Препараты и процедуры"
+        android:background="@drawable/button_main_shape_pressed"
+
+        android:textColor="@color/colorTextIcons"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_course"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toEndOf="@+id/ib_course"
+        app:layout_constraintTop_toTopOf="@+id/ib_course"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/ib_course"
+        android:layout_width="159dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_main_shape_pressed"
+        android:fontFamily="@font/roboto"
+        android:text="Курсы"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/toDiagnosysBtn"
+        android:layout_width="157dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto"
+        android:text="Диагнозы и симптомы"
+        android:background="@drawable/button_main_shape_pressed"
+
+        android:textColor="@color/colorTextIcons"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/ib_pills"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ib_pills"
+        app:layout_constraintTop_toBottomOf="@+id/ib_pills" />
+
+    <Button
+        android:id="@+id/ib_doctors"
+        android:layout_width="157dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto"
+        android:text="Врачи"
+        android:background="@drawable/button_main_shape_pressed"
+
+        android:textColor="@color/colorTextIcons"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/ib_course"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ib_course"
+        app:layout_constraintTop_toBottomOf="@+id/ib_course" />
+
+    <TextView
+        android:id="@+id/mainFirstLastNameTxt"
+        android:layout_width="206dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/options_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_options" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

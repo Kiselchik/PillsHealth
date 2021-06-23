@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AidHealth</string>
+    <string-array name="units">
+        <item>Мл</item>
+        <item>Мг</item>
+        <item>Г</item>
+        <item>Шт</item>
+    </string-array>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddCourseActivity">
+
+
+    <Switch
+        android:id="@+id/switchPillProcedure2"
+        android:layout_width="118dp"
+        android:layout_height="39dp"
+        android:text="препарат"
+        android:textOff="процедуры"
+        android:textOn="препараты"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/courseNameEdTxt"
+        android:layout_width="301dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Наименование курса"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/pillsSpinner"
+        android:layout_width="301dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/courseNameEdTxt"
+        app:layout_constraintStart_toStartOf="@+id/courseNameEdTxt"
+        app:layout_constraintTop_toBottomOf="@+id/courseNameEdTxt"></Spinner>
+
+    <Spinner
+        android:id="@+id/doctorsSpinner"
+        android:layout_width="301dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/pillsSpinner"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/pillsSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/pillsSpinner"></Spinner>
+
+    <Spinner
+        android:id="@+id/foodsSpinner"
+        android:layout_width="301dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/doctorsSpinner"
+        app:layout_constraintStart_toStartOf="@+id/doctorsSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/doctorsSpinner"></Spinner>
+
+    <EditText
+        android:id="@+id/descrEdTxt"
+        android:layout_width="301dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Описание"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/diagnosisSpinner"
+        app:layout_constraintStart_toStartOf="@+id/diagnosisSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosisSpinner" />
+
+    <Button
+        android:id="@+id/addCourseButton"
+        style="@style/ButtonAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+
+        android:fontFamily="@font/roboto"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Сохранить"
+        android:textColor="@color/colorTextIcons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descrEdTxt" />
+
+    <Spinner
+        android:id="@+id/diagnosisSpinner"
+        android:layout_width="301dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/foodsSpinner"
+        app:layout_constraintStart_toStartOf="@+id/foodsSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/foodsSpinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

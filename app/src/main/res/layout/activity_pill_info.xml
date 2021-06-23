@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".activity.PillInfoActivity">
+
+
+    <TextView
+        android:id="@+id/namePill"
+        android:layout_width="171dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/residuePill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/namePill"
+        app:layout_constraintTop_toBottomOf="@+id/namePill" />
+
+    <ImageButton
+        android:id="@+id/plus_num_pill_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/residuePill"
+        app:layout_constraintTop_toBottomOf="@+id/residuePill"
+        app:srcCompat="@drawable/plus_num_pill" />
+
+    <ImageButton
+        android:id="@+id/minus_num_pill_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/plus_num_pill_ib"
+        app:layout_constraintTop_toBottomOf="@+id/residuePill"
+        app:srcCompat="@drawable/minus_num_pill" />
+
+    <EditText
+        android:id="@+id/pack_pill_edTxt"
+        android:layout_width="102dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="упаковок"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/plus_num_pill_ib"
+        app:layout_constraintTop_toBottomOf="@+id/plus_num_pill_ib" />
+
+    <EditText
+        android:id="@+id/unity_pill_edTxt"
+        android:layout_width="102dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="объем"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/pack_pill_edTxt"
+        app:layout_constraintTop_toBottomOf="@+id/minus_num_pill_ib" />
+
+    <Button
+        android:id="@+id/saveNumBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Save"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/pack_pill_edTxt"
+        app:layout_constraintTop_toBottomOf="@+id/pack_pill_edTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

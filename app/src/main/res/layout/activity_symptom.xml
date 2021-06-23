@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SymptomActivity">
+
+    <ImageButton
+        android:id="@+id/toAddSymptomActivity"
+        android:layout_width="35dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/symptomRecycler"
+        android:layout_width="318dp"
+        android:layout_height="462dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewDiagnosis"
+        android:layout_width="113dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="Диагнозы"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSymptoms"
+        android:layout_width="113dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="Симптомы"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/toAddSymptomActivity"
+        app:layout_constraintStart_toEndOf="@+id/textViewDiagnosis"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDiagnosis"
+        android:layout_width="131dp"
+        android:layout_height="3dp"
+        android:background="@color/colorDarkPrimary"
+        app:layout_constraintStart_toStartOf="@+id/textViewDiagnosis"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDiagnosis" />
+
+    <View
+        android:id="@+id/viewSymptoms"
+        android:layout_width="133dp"
+        android:layout_height="3dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSymptoms"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/viewDiagnosis"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSymptoms" />
+</androidx.constraintlayout.widget.ConstraintLayout>

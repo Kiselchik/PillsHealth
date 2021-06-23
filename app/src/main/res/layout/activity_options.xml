@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OptionsActivity">
+
+    <Button
+        android:id="@+id/clearCourseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="clearCourseBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clearPillBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="clearPillBtn"
+        app:layout_constraintStart_toEndOf="@+id/clearCourseBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clearDoctorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:text="clearDoctorBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clearCourseBtn" />
+
+    <Button
+        android:id="@+id/clearDiagnosisBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="clearDiagnosisBtn"
+        app:layout_constraintStart_toEndOf="@+id/clearDoctorBtn"
+        app:layout_constraintTop_toBottomOf="@+id/clearPillBtn" />
+
+    <Button
+        android:id="@+id/deleteCoursePointBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="deleteCoursePoint"
+        app:layout_constraintStart_toStartOf="@+id/clearDoctorBtn"
+        app:layout_constraintTop_toBottomOf="@+id/clearDoctorBtn" />
+
+    <Button
+        android:id="@+id/deleteSymptomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="clearSymptom"
+        app:layout_constraintStart_toStartOf="@+id/deleteCoursePointBtn"
+        app:layout_constraintTop_toBottomOf="@+id/deleteCoursePointBtn" />
+
+    <Button
+        android:id="@+id/deleteSystemSymptomBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="DeleteSystemSymptom"
+        app:layout_constraintStart_toStartOf="@+id/deleteSymptomButton"
+        app:layout_constraintTop_toBottomOf="@+id/deleteSymptomButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
